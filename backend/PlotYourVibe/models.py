@@ -49,7 +49,7 @@ class Mood(models.Model):
     ]
 
     mood = models.CharField(max_length=1, choices=MOOD_CHOICES, default=TYPE_HAPPY)
-    scale = models.DecimalField(max_digits=2, decimal_places=2)
+    scale = models.DecimalField(max_digits=6, decimal_places=2)
     description = models.CharField(max_length=200)
     timestamp = models.DateTimeField(auto_now_add=True)
     # (User)1 -- *(Mood)
