@@ -8,7 +8,7 @@ class MoodSerializer(serializers.ModelSerializer):
         model = Mood
         fields = (
             'id',
-            'type',
+            'mood',
             'scale',
             'description',
             'timestamp'
