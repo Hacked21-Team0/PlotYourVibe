@@ -1,15 +1,16 @@
-from django.shortcuts import render
 from rest_framework import viewsets
-from .serializers import MoodSerializer, UserSerializer
-from .models import Mood, User
 
-# Create your views here.
+from .models import Mood, User
+from .serializers import MoodSerializer, UserSerializer
+
 
 class UserView(viewsets.ModelViewSet):
+    # permission_classes = (IsAuthenticated,)
     serializer_class = UserSerializer
     queryset = User.objects.all()
 
+
 class MoodView(viewsets.ModelViewSet):
+    # permission_classes = (IsAuthenticated,)
     serializer_class = MoodSerializer
     queryset = Mood.objects.all()
-

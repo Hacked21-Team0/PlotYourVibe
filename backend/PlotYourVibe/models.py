@@ -1,6 +1,7 @@
+from django.contrib.auth.models import User as DJUser
 from django.db import models
-from django.db.models.fields import CharField, DecimalField, EmailField, FloatField
-#from django.contrib.auth.models import User
+from django.db.models.fields import DecimalField
+
 
 # Create your models here.
 
@@ -16,11 +17,12 @@ class User(models.Model):
         (LEVEL_3, 'Level 3'),
     ]
 
+    user = models.OneToOneField(DJUser, on_delete=models.CASCADE)
     name = models.CharField(max_length=200)
     email = models.EmailField(unique=True)
-    weight_kg = DecimalField(max_digits=6, 
+    weight_kg = DecimalField(max_digits=6,
         decimal_places=2, default=100)
-    height_cm = DecimalField(max_digits=6, 
+    height_cm = DecimalField(max_digits=6,
         decimal_places=2, default=100)
     level = models.CharField(max_length=1, choices=LEVEL_CHOICES, default=LEVEL_1)
 
@@ -61,6 +63,6 @@ class Mood(models.Model):
         ordering = ['mood']
 
 
-    
+
 
 
