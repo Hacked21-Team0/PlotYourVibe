@@ -9,7 +9,7 @@ from . import models
 @admin.register(models.Mood)
 class MoodAdmin(admin.ModelAdmin):
     autocomplete_fields = ['user']
-    list_display = ['mood', 'scale', 'description', 'user']
+    list_display = ['id', 'mood', 'scale', 'description', 'user']
     list_filter = ['mood']
 
     def mood_user(self, mood):
@@ -18,5 +18,5 @@ class MoodAdmin(admin.ModelAdmin):
 @admin.register(models.User)
 class MoodAdmin(admin.ModelAdmin):
     search_fields = ['name']
-    list_display = ['name', 'email', 'weight_kg', 'height_cm', 'level']
+    list_display = ['id', 'name', 'email', 'weight_kg', 'height_cm', 'level']
     list_filter = ['name']
