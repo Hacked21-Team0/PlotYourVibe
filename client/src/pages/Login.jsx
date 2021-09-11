@@ -14,6 +14,11 @@ class Login extends Component {
 
     componentDidMount = () => { }
 
+    handleLogin = () => {
+        window.location = '/dashboard'
+
+    }
+
     render() {
         return (
             <div className=".bg" style={{ display: "flex", flexDirection: "column", alignItems: "center", margin: "30%" }}>
@@ -24,7 +29,7 @@ class Login extends Component {
 
                 <TextField style={{ marginTop: 50 }} placeholder="Password" type="password" value={this.state.password} onChange={(e) => this.setState({ password: e.target.value })} />
 
-                <Button style={{ marginTop: 50 }} variant="outlined" color="primary" >Log in</Button>
+                <Button onClick={this.handleLogin} style={{ marginTop: 50 }} variant="outlined" color="primary" >Log in</Button>
 
             </div>
         )
