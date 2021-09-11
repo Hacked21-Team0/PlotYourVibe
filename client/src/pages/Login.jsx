@@ -14,14 +14,14 @@ class Login extends Component {
 
     componentDidMount = () => { }
 
-    handleLogin = () => {
+    handleLogin = async() => {
         window.location = '/dashboard'
 
     }
 
     render() {
         return (
-            <div className=".bg" style={{ display: "flex", flexDirection: "column", alignItems: "center", margin: "30%" }}>
+            <div className="container" style={{ display: "flex", flexDirection: "column", alignItems: "center", margin: "30%" }}>
 
                 <h1>Plot Your Vibe</h1>
 
