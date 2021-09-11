@@ -15,7 +15,7 @@ class BackendAPI {
 
     }
 
-    static getMoods(token) {
+    static getAllMoods(token) {
 
         return axios
             .get(
@@ -28,7 +28,7 @@ class BackendAPI {
 
     }
 
-    static getUsers(token) {
+    static getAllUsers(token) {
 
         return axios
             .get(
@@ -37,7 +37,8 @@ class BackendAPI {
                     headers: {
                         'Authorization': 'Token ' + token
                     }
-                })
+                }
+            )
 
     }
 
