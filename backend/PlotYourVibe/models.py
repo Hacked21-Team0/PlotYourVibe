@@ -1,4 +1,4 @@
-from django.contrib.auth.models import User as DJUser
+from django.contrib.auth.models import User as DJUser, AbstractUser
 from django.db import models
 from django.db.models.fields import DecimalField
 
