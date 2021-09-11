@@ -1,3 +1,26 @@
 .bg {
     background: url('../assets/taneli-lahtinen-m6K4wGEQOq4-unsplash.jpg') no-repeat;
+    
 }
+
+.container {
+    max-width: 500px;
+    margin: 30px auto;
+    overflow: auto;
+    min-height: 300px;
+    border: 1px solid black;
+    background-color:blanchedalmond;
+    background-image: url('../assets/login_background.jpg');
+    padding: 30px;
+    border-radius: 5px;
+  }
+
+  .dash_container {
+    max-width: 500px;
+    margin: 30px auto;
+    overflow: auto;
+    min-height: 300px;
+    border: 1px solid black;
+    padding: 30px;
+    border-radius: 5px;
+  }

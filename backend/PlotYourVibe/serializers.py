@@ -11,7 +11,8 @@ class MoodSerializer(serializers.ModelSerializer):
             'mood',
             'scale',
             'description',
-            'timestamp'
+            'timestamp',
+            'user'
         )
 
 
@@ -21,5 +22,8 @@ class UserSerializer(serializers.ModelSerializer):
         fields = (
             'id',
             'name',
+            'email',
+            'weight_kg',
+            'height_cm',
             'level'
         )
