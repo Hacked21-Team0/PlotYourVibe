@@ -1,10 +1,13 @@
 import React, { Component } from "react";
 import * as actions from "../redux/actions";
 import { createStructuredSelector } from "reselect";
-import { selectCurrentNumber } from "../redux/selectors/number";
 import { connect } from "react-redux";
 import { Button, TextField } from "@material-ui/core"
+import { selectCurrentUser } from "../redux/selectors/user";
+import { selectCurrentNumber } from "../redux/selectors/number";
 import '../styles/login.css'
+import BackendAPI from "../BackendAPI";
+
 
 class Login extends Component {
     state = {
@@ -14,9 +17,14 @@ class Login extends Component {
 
     componentDidMount = () => { }
 
-    handleLogin = async() => {
-        window.location = '/dashboard'
-
+    handleLogin = async () => {
+        BackendAPI.login(this.state.email, this.state.password)
+            .then(response => {
+                console.log(response.data);
+                this.props.SetCurrentUser(response.data);
+                // window.location = '/dashboard';
+            })
+            .catch(reason => console.log(reason))
     }
 
     render() {
@@ -37,7 +45,8 @@ class Login extends Component {
 }
 
 const mapStateToProps = createStructuredSelector({
-    currentNumber: selectCurrentNumber
+    currentNumber: selectCurrentNumber,
+    currentUser: selectCurrentUser,
 })
 
 export default connect(mapStateToProps, actions)(Login);
