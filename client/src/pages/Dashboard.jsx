@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import Barchart from '../components/Barchart'
+import History from './History'
 import '../styles/dashboard.css'
 
 export default class Dashboard extends Component {
@@ -14,7 +15,7 @@ export default class Dashboard extends Component {
 				Mood Dashboard
 			</div>
 			<Barchart/>
-
+			<History/>
 			<div className='dash_container'>
 				Hello from dashboard
 
