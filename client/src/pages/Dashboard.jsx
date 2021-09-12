@@ -16,12 +16,7 @@ export default class Dashboard extends Component {
 			</div>
 			<Barchart/>
 			<History/>
-			<div className='dash_container'>
-				Hello from dashboard
-
-
-			</div>
-			</div>
+		</div>
 
 		)
 	}

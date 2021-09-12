@@ -46,8 +46,8 @@ const Barchart = () =>{
 	return <div>
 		
         <BarChart
-          width={window.innerWidth}
-		  height={window.innerHeight*.5}
+          width={window.innerWidth * .95}
+		  height={window.innerHeight * .8}
 
           data={data}
           margin={{
