@@ -88,7 +88,7 @@ class BackendAPI {
     static deleteMood(token, moodID) {
 
         return axios.delete(
-            `/api/moods/${moodID}`,
+            `/api/moods/${moodID}/`,
             createAuthHeader(token)
         );
 
