@@ -22,7 +22,7 @@ export default class History extends Component {
           <thead>
             <tr>
               <th>Mood</th>
-              <th>Scale 0-10</th>
+              <th>Scale %</th>
               <th>Description</th>
               <th>Date</th>
             </tr>

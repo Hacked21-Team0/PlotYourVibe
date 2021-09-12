@@ -3,21 +3,21 @@ const historyData = [
     {
         _id: "1",
         mood: "Happy",
-        scale: 8,
+        scale: 80,
         description: "Visited my mom today.",
         date: "2021-09-12"
     },
     {
         _id: "2",
         mood: "Neutral",
-        scale: 3,
+        scale: 30,
         description: "Just a lazy day.",
         date: "2021-09-10"
     },
     {
         _id: "3",
         mood: "Happy",
-        scale: 4,
+        scale: 45,
         description: "",
         date: "2021-09-9"
     },
@@ -38,21 +38,21 @@ const historyData = [
     {
         _id: "6",
         mood: "Sad",
-        scale: 7,
+        scale: 70,
         description: "Had a rough day at the office",
         date: "2021-09-5"
     },
     {
         _id: "7",
         mood: "Sad",
-        scale: 9,
+        scale: 90,
         description: "Don't wanna talk about it",
         date: "2021-09-2"
     },
     {
         _id: "8",
         mood: "Excited",
-        scale: 8,
+        scale: 80,
         description: "Going on a movie date",
         date: "2021-09-1"
     },
