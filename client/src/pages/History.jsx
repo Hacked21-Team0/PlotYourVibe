@@ -5,6 +5,12 @@ export default class History extends Component {
   state = {
     history: getHistoryReport(),
   };
+
+  handleDelete = (historyData) => {
+    const editedHistoryList = this.state.history.filter(m => m._id !== historyData._id);
+    this.setState({ history: editedHistoryList })
+
+  };
   render() {
     return (
       <div>
@@ -28,6 +34,8 @@ export default class History extends Component {
                 <td>{data.scale}</td>
                 <td>{data.description}</td>
                 <td>{data.date}</td>
+                <td><button onClick={() => this.handleDelete(data)} 
+                className="btn btn-danger btn-sm">Delete</button></td>
               </tr>
             ))}
           </tbody>
