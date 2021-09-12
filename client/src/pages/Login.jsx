@@ -5,6 +5,7 @@ import {selectCurrentNumber} from "../redux/selectors/number";
 import {connect} from "react-redux";
 import {Button, TextField} from "@material-ui/core"
 import '../styles/login.css'
+import Barchart from "../components/Barchart";
 
 class Login extends Component {
     state = {
@@ -29,7 +30,6 @@ class Login extends Component {
                 <TextField style={{ marginTop: 50 }} label="Password" type="password" value={this.state.password} onChange={(e) => this.setState({ password: e.target.value })} />
 
                 <Button onClick={this.handleLogin} style={{ marginTop: 50 }} variant="outlined" color="primary" >Log in</Button>
-
             </div>
         )
     }
