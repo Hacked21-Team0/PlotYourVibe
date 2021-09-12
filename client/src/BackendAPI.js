@@ -12,7 +12,7 @@ class BackendAPI {
                 username: username,
                 password: password
             }
-        )
+        );
 
     }
 
@@ -24,9 +24,9 @@ class BackendAPI {
             '/api/moods/',
             createAuthHeader(token)
         ).then((response) => {
-            response.data = response.data.filter(mood => mood.user === userID)
-            return response
-        })
+            response.data = response.data.filter(mood => mood.user === userID);
+            return response;
+        });
 
     }
 
@@ -35,7 +35,7 @@ class BackendAPI {
         return axios.get(
             '/api/users/',
             createAuthHeader(token)
-        )
+        );
 
     }
 
@@ -46,7 +46,7 @@ class BackendAPI {
         return axios.get(
             `/api/moods/${moodID}/`,
             createAuthHeader(token)
-        )
+        );
 
     }
 
@@ -65,7 +65,7 @@ class BackendAPI {
                 user: userID
             },
             createAuthHeader(token)
-        )
+        );
 
     }
 
@@ -81,7 +81,7 @@ class BackendAPI {
                 user: userID
             },
             createAuthHeader(token)
-        )
+        );
 
     }
 
@@ -90,7 +90,7 @@ class BackendAPI {
         return axios.delete(
             `/api/moods/${moodID}`,
             createAuthHeader(token)
-        )
+        );
 
     }
 
@@ -101,7 +101,7 @@ class BackendAPI {
         return axios.get(
             `/api/users/${userID}/`,
             createAuthHeader(token)
-        )
+        );
 
     }
 
@@ -113,7 +113,7 @@ function createAuthHeader(token) {
         headers: {
             'Authorization': 'Token ' + token
         }
-    }
+    };
 
 }
 
