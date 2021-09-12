@@ -24,9 +24,9 @@ class Login extends Component {
 
                 <h1>Plot Your Vibe</h1>
 
-                <TextField style={{ marginTop: 50 }} placeholder="Username" type="username" value={this.state.username} onChange={(e) => this.setState({ username: e.target.value })} />
+                <TextField style={{ marginTop: 50 }} label="Username" type="username" value={this.state.username} onChange={(e) => this.setState({ username: e.target.value })} />
 
-                <TextField style={{ marginTop: 50 }} placeholder="Password" type="password" value={this.state.password} onChange={(e) => this.setState({ password: e.target.value })} />
+                <TextField style={{ marginTop: 50 }} label="Password" type="password" value={this.state.password} onChange={(e) => this.setState({ password: e.target.value })} />
 
                 <Button onClick={this.handleLogin} style={{ marginTop: 50 }} variant="outlined" color="primary" >Log in</Button>
 
