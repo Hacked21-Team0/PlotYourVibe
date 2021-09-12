@@ -75,7 +75,7 @@ export default class History extends Component {
                 <td>{data.mood}</td>
                 <td>{`${(data.scale * 100).toFixed(0)}%`}</td>
                 <td>{data.description}</td>
-                <td>{data.date}</td>
+                <td>{new Date(data.timestamp).toLocaleString()}</td>
                 <td>
                     <button
                         onClick={() => this.handleDelete(data.id)}
