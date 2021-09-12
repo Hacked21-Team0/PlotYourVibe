@@ -1,4 +1,5 @@
-import React, { Component } from 'react'
+import React, { Component, useState } from 'react'
+
 
 const MenuItems = [
 	{
@@ -20,6 +21,11 @@ const MenuItems = [
 
 
 const NavBar = () => {
+	const [clicked, setClicked] = useState(false)
+	const handleClick =() =>{
+		this.setState({clicked: !this.state.clicked})
+	}
+
 	return (
 		<div>
 			<ul class="navbar">
