@@ -1,17 +1,29 @@
+.bgconatiner {
+    background-image: url("https://www.google.com/imgres?imgurl=https%3A%2F%2Fcdn.pixabay.com%2Fphoto%2F2017%2F08%2F30%2F01%2F05%2Fmilky-way-2695569__480.jpg&imgrefurl=https%3A%2F%2Fpixabay.com%2Fimages%2Fsearch%2Fbackground%2F&tbnid=wJnaPLBsFDC_-M&vet=12ahUKEwi965na_fnyAhWDmJ4KHc1GD-AQMygBegUIARDSAQ..i&docid=LAIZRd0gOwrSbM&w=853&h=480&q=background&ved=2ahUKEwi965na_fnyAhWDmJ4KHc1GD-AQMygBegUIARDSAQ");
+}
+.h1font {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  }
+
 .bg {
-    background: url('../assets/taneli-lahtinen-m6K4wGEQOq4-unsplash.jpg') no-repeat;
+    background: url('../assets/taneli-lahtinen-m6K4wGEQOq4-unsplash.jpg') no-repeat ;
     
 }
 
 .container {
-    max-width: 500px;
+    display: flex;
+    /* max-width: 500px; */
+    width: 100vw;
+    height: 50vh;
     margin: 30px auto;
-    overflow: auto;
     min-height: 300px;
     border: 1px solid black;
-    background-color:blanchedalmond;
-    background-image: url('../assets/login_background.jpg');
-    padding: 30px;
+    background: linear-gradient(90deg, rgba(112,213,169,1) 35%, rgba(12,173,126,0.3443478260869566) 66%, rgba(0,212,255,1) 100%);
+    background-repeat: no-repeat;
+    
+    padding: 35px;
     border-radius: 5px;
+    justify-content: center;
+    align-items: center;
   }
 
