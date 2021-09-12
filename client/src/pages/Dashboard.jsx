@@ -70,10 +70,14 @@ export default class Dashboard extends Component {
                     Mood Dashboard
                 </div>
                 <Barchart/>
+                <div className="flex-container">
+                    <Button className="addmoodbtn" variant="contained" color="primary" onClick={this.openDialog}>
+                        Add Mood
+                    </Button>
+                </div>
                 <History/>
-                <Button variant="contained" color="primary" onClick={this.openDialog}>
-                    Add Mood
-                </Button>
+
+
                 <AddMoodDialog open={this.state.dialogOpen} onClose={this.closeDialog}/>
                 <Snackbar open={this.state.alertOpen} autoHideDuration={6000} onClose={this.handleAlertClose}>
                     <Alert onClose={this.handleAlertClose} severity="success">

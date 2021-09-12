@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {Bar, BarChart, CartesianGrid, Legend, Tooltip, XAxis, YAxis} from 'recharts';
 import '../styles/dashboard.css';
 import BackendAPI from '../BackendAPI';
+import MoodType from '../MoodType';
 
 // Waiting on Redux //
 const PLACEHOLDER_TOKEN = 'd9f33fb636c489e78fc7f11e84101ab0bd95561b';
@@ -28,7 +29,10 @@ class Barchart extends Component {
             PLACEHOLDER_UID
         ).then((response) => {
             console.log(response);
-            this.setState({history: response.data});
+            this.setState({history: response.data.map((item) => {
+                    item.mood = MoodType.properties[item.mood].name;
+                    return item;
+                })});
         });
 
     };
@@ -54,7 +58,7 @@ class Barchart extends Component {
                     }}
                 >
                     <CartesianGrid strokeDasharray="3 3"/>
-                    <XAxis dataKey="timestamp" fill="#82ca9d" />
+                    <XAxis dataKey="mood" fill="#82ca9d" />
                     <YAxis/>
                     <Tooltip/>
                     <Legend/>

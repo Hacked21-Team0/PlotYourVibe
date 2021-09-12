@@ -22,7 +22,7 @@
 	font-family:'verdana';
 	color: #0000ff	;
   }
-  
+
 .bg{
 	background-color: #ffffe6
 
@@ -35,7 +35,7 @@
 	overflow: auto;
 	list-style-type: none
   }
-  
+
   .navbar a {
 	float: left;
 	padding: 12px;
@@ -43,19 +43,25 @@
 	text-decoration: none;
 	font-size: 25px;
   }
-  
+
   .navbar a:hover {
 	transition: 1s;
 	background-color: rgb(10, 60, 77);
   }
-  
+
   .active {
 	background-color: #0b67a0;
   }
-  
+
   @media screen and (max-width: 500px) {
 	.navbar a {
 	  float: none;
 	  display: block;
 	}
   }
+
+.flex-container{
+	display: flex;
+	justify-content: center;
+	margin: 50px;
+}
