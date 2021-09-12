@@ -73,7 +73,7 @@ export default class History extends Component {
         return this.state.history.map((data) => (
             <tr key={data.id}>
                 <td>{data.mood}</td>
-                <td>{data.scale}</td>
+                <td>{`${(data.scale * 100).toFixed(0)}%`}</td>
                 <td>{data.description}</td>
                 <td>{data.date}</td>
                 <td>
