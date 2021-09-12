@@ -4,17 +4,17 @@ import React, { Component, useState } from 'react'
 const MenuItems = [
 	{
 		title: 'Home',
-		url: '#',
+		url: '/Dashboard',
 		cName: 'nav-links'
 	},
 	{
 		title: 'Charts',
-		url: '#',
+		url: '/Dashboard',
 		cName: 'nav-links'
 	},
 	{
 		title: 'Sign Out',
-		url: '#',
+		url: '/',
 		cName: 'nav-links'
 	}
 ]
