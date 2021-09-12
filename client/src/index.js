@@ -8,6 +8,8 @@ import { Provider } from "react-redux";
 import { persistStore } from "redux-persist"
 import { PersistGate } from "redux-persist/integration/react"
 import rootReducer from "./redux/reducers/index";
+import 'bootstrap/dist/css/bootstrap.css';
+import 'font-awesome/css/font-awesome.css';
 
 const middleware = [thunk, logger];
 const store = createStore(rootReducer, applyMiddleware(...middleware));

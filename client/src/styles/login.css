@@ -1,26 +1,26 @@
+.h1font {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  }
+
 .bg {
-    background: url('../assets/taneli-lahtinen-m6K4wGEQOq4-unsplash.jpg') no-repeat;
+    background: url('../assets/taneli-lahtinen-m6K4wGEQOq4-unsplash.jpg') no-repeat ;
     
 }
 
 .container {
-    max-width: 500px;
+    display: flex;
+    /* max-width: 500px; */
+    width: 100vw;
+    height: 50vh;
     margin: 30px auto;
-    overflow: auto;
     min-height: 300px;
     border: 1px solid black;
-    background-color:blanchedalmond;
-    background-image: url('../assets/login_background.jpg');
+    background: linear-gradient(90deg, rgba(112,213,169,1) 35%, rgba(12,173,126,0.3443478260869566) 66%, rgba(0,212,255,1) 100%);
+    background-repeat: no-repeat;
+    
     padding: 30px;
     border-radius: 5px;
+    justify-content: center;
+    align-items: center;
   }
 
-  .dash_container {
-    max-width: 500px;
-    margin: 30px auto;
-    overflow: auto;
-    min-height: 300px;
-    border: 1px solid black;
-    padding: 30px;
-    border-radius: 5px;
-  }

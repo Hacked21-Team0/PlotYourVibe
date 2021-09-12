@@ -1,14 +1,15 @@
-import React, { Component } from "react";
+import React, {Component} from "react";
 import * as actions from "../redux/actions";
-import { createStructuredSelector } from "reselect";
-import { selectCurrentNumber } from "../redux/selectors/number";
-import { connect } from "react-redux";
-import { Button, TextField } from "@material-ui/core"
+import {createStructuredSelector} from "reselect";
+import {selectCurrentNumber} from "../redux/selectors/number";
+import {connect} from "react-redux";
+import {Button, TextField} from "@material-ui/core"
 import '../styles/login.css'
+import Barchart from "../components/Barchart";
 
 class Login extends Component {
     state = {
-        email: "",
+        username: "",
         password: ""
     }
 
@@ -16,21 +17,19 @@ class Login extends Component {
 
     handleLogin = async() => {
         window.location = '/dashboard'
-
     }
 
     render() {
         return (
-            <div className="container" style={{ display: "flex", flexDirection: "column", alignItems: "center", margin: "30%" }}>
+            <div className="container" style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
 
-                <h1>Plot Your Vibe</h1>
+                <h1 className="h1font">Plot Your Vibe</h1>
 
-                <TextField style={{ marginTop: 50 }} placeholder="Email" type="email" value={this.state.email} onChange={(e) => this.setState({ email: e.target.value })} />
+                <TextField style={{ marginTop: 50 }} label="Username" type="username" value={this.state.username} onChange={(e) => this.setState({ username: e.target.value })} />
 
-                <TextField style={{ marginTop: 50 }} placeholder="Password" type="password" value={this.state.password} onChange={(e) => this.setState({ password: e.target.value })} />
+                <TextField style={{ marginTop: 50 }} label="Password" type="password" value={this.state.password} onChange={(e) => this.setState({ password: e.target.value })} />
 
                 <Button onClick={this.handleLogin} style={{ marginTop: 50 }} variant="outlined" color="primary" >Log in</Button>
-
             </div>
         )
     }
