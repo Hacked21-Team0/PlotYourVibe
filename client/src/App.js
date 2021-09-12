@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Login from "./pages/Login";
 import Dashboard from './pages/Dashboard'
+import History from "./pages/History";
 
 class App extends Component {
   render() {
@@ -10,6 +11,8 @@ class App extends Component {
         <Switch>
           <Route exact path="/" component={Login} />
           <Route exact path="/dashboard" component={Dashboard} />
+          <Route exact path="/history" component={History} />
+
 
         </Switch>
       </BrowserRouter>
