@@ -1,8 +1,7 @@
 from django.contrib.auth.models import User as DJUser
-from rest_framework import viewsets
+from rest_framework import authentication, viewsets
 from rest_framework.authtoken.views import ObtainAuthToken
 from rest_framework.permissions import IsAuthenticated
-
 from .models import Mood, User
 from .serializers import MoodSerializer, UserSerializer
 
@@ -18,10 +17,12 @@ class MoodView(viewsets.ModelViewSet):
     serializer_class = MoodSerializer
     queryset = Mood.objects.all()
 
-
+'''
 class LoginView(ObtainAuthToken):
-    def post(self, request, *args, **kwargs):
-        response = super().post(request, *args, **kwargs)
+    def post(self, request):
+        response = super().post(request)
         username = request.data.get('username')
         response.data['user_id'] = User.objects.get(user = DJUser.objects.get(username = username)).id
         return response
+'''
+

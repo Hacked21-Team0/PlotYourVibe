@@ -1,0 +1,61 @@
+.dash_container {
+	width: 80%;
+    margin: 30px auto;
+    overflow: auto;
+    min-height: 300px;
+    border: 1px solid black;
+    padding: 30px;
+    border-radius: 5px;
+}
+
+.barchart{
+	width: 80%;
+	align-items: center;
+}
+
+.header {
+
+	text-align: center;
+	font-size:50px;
+	margin-top: 50px;
+	text-transform: uppercase;
+	font-family:'verdana';
+	color: #0000ff	;
+  }
+  
+.bg{
+	background-color: #ffffe6
+
+}
+
+  .navbar {
+	position: fixed;
+	width: 100%;
+	background-color: rgb(7, 60, 77);
+	overflow: auto;
+	list-style-type: none
+  }
+  
+  .navbar a {
+	float: left;
+	padding: 12px;
+	color: white;
+	text-decoration: none;
+	font-size: 25px;
+  }
+  
+  .navbar a:hover {
+	transition: 1s;
+	background-color: rgb(10, 60, 77);
+  }
+  
+  .active {
+	background-color: #0b67a0;
+  }
+  
+  @media screen and (max-width: 500px) {
+	.navbar a {
+	  float: none;
+	  display: block;
+	}
+  }

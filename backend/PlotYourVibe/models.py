@@ -1,4 +1,4 @@
-from django.contrib.auth.models import User as DJUser, AbstractUser
+from django.contrib.auth.models import User as DJUser
 from django.db import models
 from django.db.models.fields import DecimalField
 
@@ -17,7 +17,7 @@ class User(models.Model):
         (LEVEL_3, 'Level 3'),
     ]
 
-    user = models.OneToOneField(DJUser, on_delete=models.CASCADE)
+    #user = models.OneToOneField(DJUser, on_delete=models.CASCADE)
     name = models.CharField(max_length=200)
     email = models.EmailField(unique=True)
     weight_kg = DecimalField(max_digits=6,
