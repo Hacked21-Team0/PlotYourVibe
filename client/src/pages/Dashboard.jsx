@@ -19,7 +19,10 @@ import {
 import MuiAlert from '@material-ui/lab/Alert';
 import MoodType from '../MoodType';
 import BackendAPI from '../BackendAPI';
-import '../styles/dashboard.css'
+import '../styles/dashboard.css';
+import Barchart from '../components/Barchart';
+import History from './History';
+import NavBar from '../components/NavBar';
 
 function Alert(props) {
     return <MuiAlert elevation={6} variant="filled" {...props} />;
