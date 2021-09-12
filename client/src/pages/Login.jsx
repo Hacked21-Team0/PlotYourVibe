@@ -21,16 +21,19 @@ class Login extends Component {
 
     render() {
         return (
-            <div className="container" style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
+            <div className="bgcontainer">
+                <div className="container" style={{ display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center" }}>
 
-                <h1 className="h1font">Plot Your Vibe</h1>
+                    <h1 className="h1font">Plot Your Vibe</h1>
 
-                <TextField style={{ marginTop: 50 }} label="Username" type="username" value={this.state.username} onChange={(e) => this.setState({ username: e.target.value })} />
+                    <TextField style={{ marginTop: 50 }} label="Username" type="username" value={this.state.username} onChange={(e) => this.setState({ username: e.target.value })} />
 
-                <TextField style={{ marginTop: 50 }} label="Password" type="password" value={this.state.password} onChange={(e) => this.setState({ password: e.target.value })} />
+                    <TextField style={{ marginTop: 50 }} label="Password" type="password" value={this.state.password} onChange={(e) => this.setState({ password: e.target.value })} />
 
-                <Button onClick={this.handleLogin} style={{ marginTop: 50 }} variant="outlined" color="primary" >Log in</Button>
+                    <Button onClick={this.handleLogin} style={{ marginTop: 50 }} variant="outlined" color="primary" >Log in</Button>
+                </div>
             </div>
+            
         )
     }
 }
